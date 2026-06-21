@@ -22,7 +22,7 @@ export const createReviewApi = async (data: {
   userName: string;
   rating: number;
   comment: string;
-}): Promise<Review[]> => {
+}): Promise<Review> => {
   const res = await api.post<Review>(`/reviews/${data.productId}`, {
     userName: data.userName,
     rating: data.rating,

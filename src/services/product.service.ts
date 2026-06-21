@@ -1,8 +1,6 @@
 import { api } from "../lib/axios";
 import type { Product } from "../types/product";
 
-
-
 export interface ProductFilters {
   search?: string;
   category?: string;
@@ -10,6 +8,8 @@ export interface ProductFilters {
   maxPrice?: number;
   rating?: number;
   sort?: string;
+  page?: number;
+  limit?: number;
 }
 
 export interface ProductsResponse {
@@ -20,23 +20,16 @@ export interface ProductsResponse {
 }
 
 export const getProducts = async (
-  filters?: ProductFilters
+  filters?: ProductFilters,
 ): Promise<ProductsResponse> => {
-  const response = await api.get(
-    "/products",
-    {
-      params: filters,
-    }
-  );
+  const response = await api.get("/products", {
+    params: filters,
+  });
 
   return response.data;
 };
 
-export const getProductById = async (
-  id: string
-): Promise<Product> => {
+export const getProductById = async (id: string): Promise<Product> => {
   const response = await api.get<Product>(`/products/${id}`);
   return response.data;
 };
-
-
