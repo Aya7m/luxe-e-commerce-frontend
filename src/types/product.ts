@@ -7,10 +7,10 @@ export interface Product {
   brand: string;
   category: string;
 
-  price: string;
+  price: number;
   rating: number;
 
-  stock: string;
+  stock: number;
 
   image: string;
 
