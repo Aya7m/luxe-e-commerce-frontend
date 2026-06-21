@@ -2,7 +2,7 @@ import axios from "axios";
 import { useAuthStore } from "../store/authStore";
 
 export const api = axios.create({
-  baseURL: "http://localhost:3000/api",
+  baseURL: "https://luxe-e-comerce-backend-3.onrender.com/api",
 });
 
 api.interceptors.request.use((config) => {
