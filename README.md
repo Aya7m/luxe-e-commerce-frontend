@@ -1,73 +1,72 @@
-# React + TypeScript + Vite
+# Luxe - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Luxe is a modern e-commerce clothing web application built with React, TypeScript, and Tailwind CSS.
+The frontend allows users to browse products, manage their cart, place orders, pay online using Stripe or cash on delivery, track order status, and chat with the admin after ordering.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Responsive e-commerce UI
+* Product listing and product details pages
+* Shopping cart functionality
+* Cash on delivery payment
+* Stripe online payment integration
+* User order tracking
+* Order status display: Pending, Confirmed, Delivered, etc.
+* User/admin chat after placing an order
+* Authentication pages
+* Admin dashboard UI
+* Admin product management
+* Admin order management
+* Admin order chat
+* Clean and reusable React components
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React.js
+* TypeScript
+* Tailwind CSS
+* React Router
+* Axios
+* Stripe Payment
+* Cloudinary product images from backend API
 
-## Expanding the ESLint configuration
+## Main Pages
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* Home Page
+* Products Page
+* Product Details Page
+* Cart Page
+* Checkout Page
+* My Orders Page
+* Chat Page
+* Login / Register
+* Admin Dashboard
+* Manage Products
+* Manage Orders
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Environment Variables
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```env
+VITE_API_URL=http://localhost:5000
+VITE_STRIPE_PUBLIC_KEY=your_stripe_public_key
 ```
+
+## Project Highlights
+
+* Built a responsive shopping experience using React and Tailwind CSS.
+* Connected the frontend with REST APIs for products, orders, cart, payments, and chat.
+* Implemented order tracking so users can follow their order status.
+* Added Stripe and cash payment options.
+* Created admin screens for managing products and orders.
+
+## Author
+
+Aya Ahmed
+Frontend / Full Stack Developer
